@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "77893a6a-bbf5-4b9b-980f-14aa60122855",
+		"name": "bt_buoi6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET LIKE RES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/get-likeRes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-likeRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET RATE RES USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/get-rateResUser",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-rateResUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST USER LIKE RES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"4\",\r\n    \"res_id\": \"1\",\r\n    \"date_like\": \"2022-01-01 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/create-likeRes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"create-likeRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST USER RATE RES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"4\",\r\n    \"res_id\": \"1\",\r\n    \"amount\": \"5\",\r\n    \"date_rate\": \"2022-01-01 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/create-rateRes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"create-rateRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ORDER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"4\",\r\n    \"food_id\": \"1\",\r\n    \"amount\": \"5\",\r\n    \"code\": \"quá đã pepsi ơi\",\r\n    \"arr_sub_id\": \"[5]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/create-order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"create-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE LIKE RES",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/remove-like/4/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"remove-like",
+						"4",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080/api",
+			"type": "default"
+		}
+	]
+}
